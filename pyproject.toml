@@ -5,11 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "letterboxd-pipeline"
 version = "0.1.0"
-description = "Download and extract a Letterboxd account data export."
+description = "Ingest Letterboxd activity from its public RSS feed."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "beautifulsoup4>=4.12,<5",
     "requests>=2.31,<3",
 ]
 
@@ -19,7 +18,7 @@ dev = [
 ]
 
 [project.scripts]
-letterboxd-export = "letterboxd_pipeline.cli:main"
+letterboxd-rss = "letterboxd_pipeline.rss_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

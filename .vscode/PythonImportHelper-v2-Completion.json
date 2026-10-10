@@ -1,95 +1,19 @@
 [
     {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "zipfile",
+        "label": "json",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "zipfile",
-        "description": "zipfile",
-        "detail": "zipfile",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
-        "label": "pytest",
-        "kind": 6,
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
         "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
-        "documentation": {}
-    },
-    {
-        "label": "_export_filename",
-        "importPath": "letterboxd_pipeline.client",
-        "description": "letterboxd_pipeline.client",
-        "isExtraImport": true,
-        "detail": "letterboxd_pipeline.client",
-        "documentation": {}
-    },
-    {
-        "label": "extract_export",
-        "importPath": "letterboxd_pipeline.client",
-        "description": "letterboxd_pipeline.client",
-        "isExtraImport": true,
-        "detail": "letterboxd_pipeline.client",
-        "documentation": {}
-    },
-    {
-        "label": "getpass",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "getpass",
-        "description": "getpass",
-        "detail": "getpass",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "re",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -101,7 +25,56 @@
         "documentation": {}
     },
     {
-        "label": "unquote",
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "xml.etree.ElementTree",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xml.etree.ElementTree",
+        "description": "xml.etree.ElementTree",
+        "detail": "xml.etree.ElementTree",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
         "importPath": "urllib.parse",
         "description": "urllib.parse",
         "isExtraImport": true,
@@ -118,137 +91,214 @@
         "documentation": {}
     },
     {
-        "label": "BeautifulSoup",
-        "importPath": "bs4",
-        "description": "bs4",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "bs4",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
-        "label": "test_export_filename_uses_safe_basename",
-        "kind": 2,
-        "importPath": "letterboxd-pipeline.tests.test_client",
-        "description": "letterboxd-pipeline.tests.test_client",
-        "peekOfCode": "def test_export_filename_uses_safe_basename():\n    assert _export_filename('attachment; filename=\"../export.zip\"') == \"export.zip\"\ndef test_export_filename_falls_back_for_non_zip():\n    assert _export_filename('attachment; filename=\"export.html\"') == \"letterboxd-export.zip\"\ndef test_extract_export_extracts_files(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"diary.csv\", \"Date,Name\\n2025-01-01,Example\\n\")\n    extract_dir = extract_export(archive_path)\n    assert (extract_dir / \"diary.csv\").read_text() == \"Date,Name\\n2025-01-01,Example\\n\"",
-        "detail": "letterboxd-pipeline.tests.test_client",
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
-        "label": "test_export_filename_falls_back_for_non_zip",
-        "kind": 2,
-        "importPath": "letterboxd-pipeline.tests.test_client",
-        "description": "letterboxd-pipeline.tests.test_client",
-        "peekOfCode": "def test_export_filename_falls_back_for_non_zip():\n    assert _export_filename('attachment; filename=\"export.html\"') == \"letterboxd-export.zip\"\ndef test_extract_export_extracts_files(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"diary.csv\", \"Date,Name\\n2025-01-01,Example\\n\")\n    extract_dir = extract_export(archive_path)\n    assert (extract_dir / \"diary.csv\").read_text() == \"Date,Name\\n2025-01-01,Example\\n\"\ndef test_extract_export_rejects_path_traversal(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"",
-        "detail": "letterboxd-pipeline.tests.test_client",
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
         "documentation": {}
     },
     {
-        "label": "test_extract_export_extracts_files",
-        "kind": 2,
-        "importPath": "letterboxd-pipeline.tests.test_client",
-        "description": "letterboxd-pipeline.tests.test_client",
-        "peekOfCode": "def test_extract_export_extracts_files(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"diary.csv\", \"Date,Name\\n2025-01-01,Example\\n\")\n    extract_dir = extract_export(archive_path)\n    assert (extract_dir / \"diary.csv\").read_text() == \"Date,Name\\n2025-01-01,Example\\n\"\ndef test_extract_export_rejects_path_traversal(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"../outside.txt\", \"unsafe\")",
-        "detail": "letterboxd-pipeline.tests.test_client",
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "test_extract_export_rejects_path_traversal",
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FEED_URL",
+        "importPath": "letterboxd_pipeline.rss",
+        "description": "letterboxd_pipeline.rss",
+        "isExtraImport": true,
+        "detail": "letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "FilmEntry",
+        "importPath": "letterboxd_pipeline.rss",
+        "description": "letterboxd_pipeline.rss",
+        "isExtraImport": true,
+        "detail": "letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_feed",
+        "importPath": "letterboxd_pipeline.rss",
+        "description": "letterboxd_pipeline.rss",
+        "isExtraImport": true,
+        "detail": "letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "export_activity",
         "kind": 2,
-        "importPath": "letterboxd-pipeline.tests.test_client",
-        "description": "letterboxd-pipeline.tests.test_client",
-        "peekOfCode": "def test_extract_export_rejects_path_traversal(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"../outside.txt\", \"unsafe\")\n    with pytest.raises(RuntimeError, match=\"unsafe file path\"):\n        extract_export(archive_path)\n    assert not (tmp_path / \"outside.txt\").exists()",
-        "detail": "letterboxd-pipeline.tests.test_client",
+        "importPath": "src.letterboxd_pipeline.export",
+        "description": "src.letterboxd_pipeline.export",
+        "peekOfCode": "def export_activity(\n    feed_url: str = DEFAULT_FEED_URL,\n    output_path: str | Path = DEFAULT_OUTPUT,\n) -> dict:\n    \"\"\"Fetch Letterboxd activity and write it to a JSON file.\"\"\"\n    output_path = Path(output_path).expanduser()\n    entries = fetch_feed(feed_url)\n    output_path.parent.mkdir(parents=True, exist_ok=True)\n    payload = [\n        {",
+        "detail": "src.letterboxd_pipeline.export",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_OUTPUT",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.export",
+        "description": "src.letterboxd_pipeline.export",
+        "peekOfCode": "DEFAULT_OUTPUT = Path(\"data/movies/raw/letterboxd/activity.json\")\ndef export_activity(\n    feed_url: str = DEFAULT_FEED_URL,\n    output_path: str | Path = DEFAULT_OUTPUT,\n) -> dict:\n    \"\"\"Fetch Letterboxd activity and write it to a JSON file.\"\"\"\n    output_path = Path(output_path).expanduser()\n    entries = fetch_feed(feed_url)\n    output_path.parent.mkdir(parents=True, exist_ok=True)\n    payload = [",
+        "detail": "src.letterboxd_pipeline.export",
+        "documentation": {}
+    },
+    {
+        "label": "FilmEntry",
+        "kind": 6,
+        "importPath": "src.letterboxd_pipeline.rss",
+        "description": "src.letterboxd_pipeline.rss",
+        "peekOfCode": "class FilmEntry:\n    title: str\n    year: int | None\n    watched_date: date | None\n    rating: float | None\n    liked: bool\n    rewatch: bool\n    letterboxd_url: str\n    tmdb_id: int | None\n    guid: str",
+        "detail": "src.letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_feed",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.rss",
+        "description": "src.letterboxd_pipeline.rss",
+        "peekOfCode": "def fetch_feed(\n    feed_url: str = DEFAULT_FEED_URL,\n    timeout: int = 20,\n) -> list[FilmEntry]:\n    \"\"\"Fetch and parse recent activity from a Letterboxd RSS feed.\"\"\"\n    parsed_url = urlparse(feed_url)\n    if parsed_url.scheme != \"https\" or parsed_url.hostname != \"letterboxd.com\":\n        raise ValueError(\"Feed URL must use HTTPS on letterboxd.com.\")\n    response = requests.get(feed_url, timeout=timeout)\n    response.raise_for_status()",
+        "detail": "src.letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "LETTERBOXD_NS",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.rss",
+        "description": "src.letterboxd_pipeline.rss",
+        "peekOfCode": "LETTERBOXD_NS = \"https://letterboxd.com\"\nTMDB_NS = \"https://themoviedb.org\"\nDEFAULT_FEED_URL = \"https://letterboxd.com/johnwid/rss/\"\n@dataclass(frozen=True)\nclass FilmEntry:\n    title: str\n    year: int | None\n    watched_date: date | None\n    rating: float | None\n    liked: bool",
+        "detail": "src.letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "TMDB_NS",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.rss",
+        "description": "src.letterboxd_pipeline.rss",
+        "peekOfCode": "TMDB_NS = \"https://themoviedb.org\"\nDEFAULT_FEED_URL = \"https://letterboxd.com/johnwid/rss/\"\n@dataclass(frozen=True)\nclass FilmEntry:\n    title: str\n    year: int | None\n    watched_date: date | None\n    rating: float | None\n    liked: bool\n    rewatch: bool",
+        "detail": "src.letterboxd_pipeline.rss",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FEED_URL",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.rss",
+        "description": "src.letterboxd_pipeline.rss",
+        "peekOfCode": "DEFAULT_FEED_URL = \"https://letterboxd.com/johnwid/rss/\"\n@dataclass(frozen=True)\nclass FilmEntry:\n    title: str\n    year: int | None\n    watched_date: date | None\n    rating: float | None\n    liked: bool\n    rewatch: bool\n    letterboxd_url: str",
+        "detail": "src.letterboxd_pipeline.rss",
         "documentation": {}
     },
     {
         "label": "main",
         "kind": 2,
-        "importPath": "src.letterboxd_pipeline.cli",
-        "description": "src.letterboxd_pipeline.cli",
-        "peekOfCode": "def main() -> int:\n    username = os.environ.get(\"LBOXD_USER\") or input(\"Letterboxd username: \").strip()\n    password = os.environ.get(\"LBOXD_PASS\") or getpass.getpass(\"Letterboxd password: \")\n    output_dir = Path(os.environ.get(\"LBOXD_OUTPUT_DIR\", str(DEFAULT_OUTPUT_DIR)))\n    print(\"Logging in and downloading Letterboxd export...\")\n    try:\n        result = run_export(username, password, output_dir)\n    except Exception as exc:\n        print(f\"Export failed: {exc}\")\n        return 1",
-        "detail": "src.letterboxd_pipeline.cli",
+        "importPath": "src.letterboxd_pipeline.rss_cli",
+        "description": "src.letterboxd_pipeline.rss_cli",
+        "peekOfCode": "def main() -> int:\n    feed_url = os.environ.get(\"LBOXD_RSS_URL\", DEFAULT_FEED_URL)\n    output_path = os.environ.get(\"LBOXD_RSS_OUTPUT\", str(DEFAULT_OUTPUT))\n    try:\n        result = export_activity(feed_url, output_path)\n    except Exception as exc:\n        print(f\"RSS export failed: {exc}\", file=sys.stderr)\n        return 1\n    print(f\"Saved {result['entries']} entries to: {result['output_path']}\")\n    return 0",
+        "detail": "src.letterboxd_pipeline.rss_cli",
         "documentation": {}
     },
     {
-        "label": "ExportResult",
-        "kind": 6,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "class ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"\n    archive_path: Path\n    extract_dir: Path\ndef get_csrf_token(session: requests.Session) -> str:\n    \"\"\"Fetch the login page and extract the hidden CSRF token.\"\"\"\n    response = session.get(f\"{BASE_URL}/sign-in/\", timeout=15)\n    response.raise_for_status()\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    token_input = soup.find(\"input\", {\"name\": \"__csrf\"})",
-        "detail": "src.letterboxd_pipeline.client",
-        "documentation": {}
-    },
-    {
-        "label": "get_csrf_token",
+        "label": "mock_response",
         "kind": 2,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "def get_csrf_token(session: requests.Session) -> str:\n    \"\"\"Fetch the login page and extract the hidden CSRF token.\"\"\"\n    response = session.get(f\"{BASE_URL}/sign-in/\", timeout=15)\n    response.raise_for_status()\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    token_input = soup.find(\"input\", {\"name\": \"__csrf\"})\n    if not token_input or not token_input.get(\"value\"):\n        raise RuntimeError(\"Could not find CSRF token on Letterboxd login page.\")\n    return str(token_input[\"value\"])\ndef login(session: requests.Session, username: str, password: str) -> None:",
-        "detail": "src.letterboxd_pipeline.client",
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def mock_response(content: bytes, status_code: int = 200) -> Mock:\n    response = Mock()\n    response.content = content\n    response.status_code = status_code\n    response.raise_for_status.return_value = None\n    return response\n@patch(\"letterboxd_pipeline.rss.requests.get\")\ndef test_fetch_feed_parses_film_entry(mock_get):\n    mock_get.return_value = mock_response(RSS_XML)\n    entries = fetch_feed()",
+        "detail": "tests.test_rss",
         "documentation": {}
     },
     {
-        "label": "login",
+        "label": "test_fetch_feed_parses_film_entry",
         "kind": 2,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "def login(session: requests.Session, username: str, password: str) -> None:\n    \"\"\"Authenticate the session using Letterboxd's sign-in endpoint.\"\"\"\n    csrf = get_csrf_token(session)\n    response = session.post(\n        f\"{BASE_URL}/user/login.do\",\n        data={\"__csrf\": csrf, \"username\": username, \"password\": password},\n        headers={\n            \"Referer\": f\"{BASE_URL}/sign-in/\",\n            \"Content-Type\": \"application/x-www-form-urlencoded\",\n            \"X-Requested-With\": \"XMLHttpRequest\",",
-        "detail": "src.letterboxd_pipeline.client",
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def test_fetch_feed_parses_film_entry(mock_get):\n    mock_get.return_value = mock_response(RSS_XML)\n    entries = fetch_feed()\n    assert len(entries) == 1\n    assert entries[0] == FilmEntry(\n        title=\"The Sentinel\",\n        year=1977,\n        watched_date=date(2026, 10, 10),\n        rating=4.0,\n        liked=True,",
+        "detail": "tests.test_rss",
         "documentation": {}
     },
     {
-        "label": "download_export",
+        "label": "test_fetch_feed_handles_missing_optional_fields",
         "kind": 2,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "def download_export(session: requests.Session, output_dir: Path) -> Path:\n    \"\"\"Download the export ZIP into output_dir.\"\"\"\n    response = session.get(\n        f\"{BASE_URL}/data/export/\",\n        headers={\"Referer\": f\"{BASE_URL}/settings/data/\"},\n        stream=True,\n        timeout=60,\n    )\n    response.raise_for_status()\n    output_dir.mkdir(parents=True, exist_ok=True)",
-        "detail": "src.letterboxd_pipeline.client",
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def test_fetch_feed_handles_missing_optional_fields(mock_get):\n    xml = b\"\"\"<rss version=\"2.0\"\n        xmlns:lb=\"https://letterboxd.com\">\n      <channel>\n        <item>\n          <link>https://letterboxd.com/johnwid/film/example/</link>\n          <guid>watch-1</guid>\n          <lb:filmTitle>Example</lb:filmTitle>\n        </item>\n      </channel>",
+        "detail": "tests.test_rss",
         "documentation": {}
     },
     {
-        "label": "extract_export",
+        "label": "test_fetch_feed_handles_empty_feed",
         "kind": 2,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "def extract_export(archive_path: Path) -> Path:\n    \"\"\"Safely extract a ZIP, rejecting paths that escape the destination.\"\"\"\n    extract_dir = archive_path.parent / archive_path.stem\n    extract_dir.mkdir(parents=True, exist_ok=True)\n    base = extract_dir.resolve()\n    with zipfile.ZipFile(archive_path) as archive:\n        for member in archive.infolist():\n            target = (extract_dir / member.filename).resolve()\n            if target != base and base not in target.parents:\n                raise RuntimeError(\"Export archive contains an unsafe file path.\")",
-        "detail": "src.letterboxd_pipeline.client",
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def test_fetch_feed_handles_empty_feed(mock_get):\n    mock_get.return_value = mock_response(\n        b\"<rss version='2.0'><channel></channel></rss>\"\n    )\n    assert fetch_feed() == []\n@patch(\"letterboxd_pipeline.rss.requests.get\")\ndef test_fetch_feed_rejects_invalid_xml(mock_get):\n    mock_get.return_value = mock_response(b\"<rss><channel>\")\n    with pytest.raises(ValueError, match=\"invalid RSS XML\"):\n        fetch_feed()",
+        "detail": "tests.test_rss",
         "documentation": {}
     },
     {
-        "label": "run_export",
+        "label": "test_fetch_feed_rejects_invalid_xml",
         "kind": 2,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "def run_export(\n    username: str,\n    password: str,\n    output_dir: Path | str = DEFAULT_OUTPUT_DIR,\n) -> ExportResult:\n    \"\"\"Log in, download the export, and extract it.\n    Credentials are supplied by the caller so this function can run from a CLI,\n    tests, or an orchestrator such as Windmill without prompting.\n    \"\"\"\n    if not username.strip():",
-        "detail": "src.letterboxd_pipeline.client",
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def test_fetch_feed_rejects_invalid_xml(mock_get):\n    mock_get.return_value = mock_response(b\"<rss><channel>\")\n    with pytest.raises(ValueError, match=\"invalid RSS XML\"):\n        fetch_feed()\ndef test_fetch_feed_rejects_non_letterboxd_url():\n    with pytest.raises(ValueError, match=\"Feed URL\"):\n        fetch_feed(\"https://example.com/feed.xml\")\n@patch(\"letterboxd_pipeline.rss.requests.get\")\ndef test_fetch_feed_propagates_http_errors(mock_get):\n    response = Mock()",
+        "detail": "tests.test_rss",
         "documentation": {}
     },
     {
-        "label": "BASE_URL",
+        "label": "test_fetch_feed_rejects_non_letterboxd_url",
+        "kind": 2,
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def test_fetch_feed_rejects_non_letterboxd_url():\n    with pytest.raises(ValueError, match=\"Feed URL\"):\n        fetch_feed(\"https://example.com/feed.xml\")\n@patch(\"letterboxd_pipeline.rss.requests.get\")\ndef test_fetch_feed_propagates_http_errors(mock_get):\n    response = Mock()\n    response.raise_for_status.side_effect = Exception(\"HTTP error\")\n    mock_get.return_value = response\n    with pytest.raises(Exception, match=\"HTTP error\"):\n        fetch_feed()",
+        "detail": "tests.test_rss",
+        "documentation": {}
+    },
+    {
+        "label": "test_fetch_feed_propagates_http_errors",
+        "kind": 2,
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "def test_fetch_feed_propagates_http_errors(mock_get):\n    response = Mock()\n    response.raise_for_status.side_effect = Exception(\"HTTP error\")\n    mock_get.return_value = response\n    with pytest.raises(Exception, match=\"HTTP error\"):\n        fetch_feed()",
+        "detail": "tests.test_rss",
+        "documentation": {}
+    },
+    {
+        "label": "RSS_XML",
         "kind": 5,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "BASE_URL = \"https://letterboxd.com\"\nDEFAULT_OUTPUT_DIR = Path(\"data/movies/raw/letterboxd\")\nUSER_AGENT = (\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \"\n    \"AppleWebKit/537.36 (KHTML, like Gecko) \"\n    \"Chrome/147.0.0.0 Safari/537.36\"\n)\n@dataclass(frozen=True)\nclass ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"",
-        "detail": "src.letterboxd_pipeline.client",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_OUTPUT_DIR",
-        "kind": 5,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "DEFAULT_OUTPUT_DIR = Path(\"data/movies/raw/letterboxd\")\nUSER_AGENT = (\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \"\n    \"AppleWebKit/537.36 (KHTML, like Gecko) \"\n    \"Chrome/147.0.0.0 Safari/537.36\"\n)\n@dataclass(frozen=True)\nclass ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"\n    archive_path: Path",
-        "detail": "src.letterboxd_pipeline.client",
-        "documentation": {}
-    },
-    {
-        "label": "USER_AGENT",
-        "kind": 5,
-        "importPath": "src.letterboxd_pipeline.client",
-        "description": "src.letterboxd_pipeline.client",
-        "peekOfCode": "USER_AGENT = (\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \"\n    \"AppleWebKit/537.36 (KHTML, like Gecko) \"\n    \"Chrome/147.0.0.0 Safari/537.36\"\n)\n@dataclass(frozen=True)\nclass ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"\n    archive_path: Path\n    extract_dir: Path",
-        "detail": "src.letterboxd_pipeline.client",
+        "importPath": "tests.test_rss",
+        "description": "tests.test_rss",
+        "peekOfCode": "RSS_XML = \"\"\"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rss version=\"2.0\"\n     xmlns:lb=\"https://letterboxd.com\"\n     xmlns:tmdb=\"https://themoviedb.org\">\n  <channel>\n    <title>Letterboxd - johnwid</title>\n    <item>\n      <title>The Sentinel, 1977 - ★★★★</title>\n      <link>https://letterboxd.com/johnwid/film/the-sentinel/</link>\n      <guid isPermaLink=\"false\">letterboxd-watch-1531262249</guid>",
+        "detail": "tests.test_rss",
         "documentation": {}
     }
 ]
