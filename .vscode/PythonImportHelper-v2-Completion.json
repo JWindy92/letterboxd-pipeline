@@ -1,0 +1,254 @@
+[
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "zipfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "_export_filename",
+        "importPath": "letterboxd_pipeline.client",
+        "description": "letterboxd_pipeline.client",
+        "isExtraImport": true,
+        "detail": "letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "extract_export",
+        "importPath": "letterboxd_pipeline.client",
+        "description": "letterboxd_pipeline.client",
+        "isExtraImport": true,
+        "detail": "letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "getpass",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "getpass",
+        "description": "getpass",
+        "detail": "getpass",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "unquote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "test_export_filename_uses_safe_basename",
+        "kind": 2,
+        "importPath": "letterboxd-pipeline.tests.test_client",
+        "description": "letterboxd-pipeline.tests.test_client",
+        "peekOfCode": "def test_export_filename_uses_safe_basename():\n    assert _export_filename('attachment; filename=\"../export.zip\"') == \"export.zip\"\ndef test_export_filename_falls_back_for_non_zip():\n    assert _export_filename('attachment; filename=\"export.html\"') == \"letterboxd-export.zip\"\ndef test_extract_export_extracts_files(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"diary.csv\", \"Date,Name\\n2025-01-01,Example\\n\")\n    extract_dir = extract_export(archive_path)\n    assert (extract_dir / \"diary.csv\").read_text() == \"Date,Name\\n2025-01-01,Example\\n\"",
+        "detail": "letterboxd-pipeline.tests.test_client",
+        "documentation": {}
+    },
+    {
+        "label": "test_export_filename_falls_back_for_non_zip",
+        "kind": 2,
+        "importPath": "letterboxd-pipeline.tests.test_client",
+        "description": "letterboxd-pipeline.tests.test_client",
+        "peekOfCode": "def test_export_filename_falls_back_for_non_zip():\n    assert _export_filename('attachment; filename=\"export.html\"') == \"letterboxd-export.zip\"\ndef test_extract_export_extracts_files(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"diary.csv\", \"Date,Name\\n2025-01-01,Example\\n\")\n    extract_dir = extract_export(archive_path)\n    assert (extract_dir / \"diary.csv\").read_text() == \"Date,Name\\n2025-01-01,Example\\n\"\ndef test_extract_export_rejects_path_traversal(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"",
+        "detail": "letterboxd-pipeline.tests.test_client",
+        "documentation": {}
+    },
+    {
+        "label": "test_extract_export_extracts_files",
+        "kind": 2,
+        "importPath": "letterboxd-pipeline.tests.test_client",
+        "description": "letterboxd-pipeline.tests.test_client",
+        "peekOfCode": "def test_extract_export_extracts_files(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"diary.csv\", \"Date,Name\\n2025-01-01,Example\\n\")\n    extract_dir = extract_export(archive_path)\n    assert (extract_dir / \"diary.csv\").read_text() == \"Date,Name\\n2025-01-01,Example\\n\"\ndef test_extract_export_rejects_path_traversal(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"../outside.txt\", \"unsafe\")",
+        "detail": "letterboxd-pipeline.tests.test_client",
+        "documentation": {}
+    },
+    {
+        "label": "test_extract_export_rejects_path_traversal",
+        "kind": 2,
+        "importPath": "letterboxd-pipeline.tests.test_client",
+        "description": "letterboxd-pipeline.tests.test_client",
+        "peekOfCode": "def test_extract_export_rejects_path_traversal(tmp_path: Path):\n    archive_path = tmp_path / \"letterboxd-export.zip\"\n    with zipfile.ZipFile(archive_path, \"w\") as archive:\n        archive.writestr(\"../outside.txt\", \"unsafe\")\n    with pytest.raises(RuntimeError, match=\"unsafe file path\"):\n        extract_export(archive_path)\n    assert not (tmp_path / \"outside.txt\").exists()",
+        "detail": "letterboxd-pipeline.tests.test_client",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.cli",
+        "description": "src.letterboxd_pipeline.cli",
+        "peekOfCode": "def main() -> int:\n    username = os.environ.get(\"LBOXD_USER\") or input(\"Letterboxd username: \").strip()\n    password = os.environ.get(\"LBOXD_PASS\") or getpass.getpass(\"Letterboxd password: \")\n    output_dir = Path(os.environ.get(\"LBOXD_OUTPUT_DIR\", str(DEFAULT_OUTPUT_DIR)))\n    print(\"Logging in and downloading Letterboxd export...\")\n    try:\n        result = run_export(username, password, output_dir)\n    except Exception as exc:\n        print(f\"Export failed: {exc}\")\n        return 1",
+        "detail": "src.letterboxd_pipeline.cli",
+        "documentation": {}
+    },
+    {
+        "label": "ExportResult",
+        "kind": 6,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "class ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"\n    archive_path: Path\n    extract_dir: Path\ndef get_csrf_token(session: requests.Session) -> str:\n    \"\"\"Fetch the login page and extract the hidden CSRF token.\"\"\"\n    response = session.get(f\"{BASE_URL}/sign-in/\", timeout=15)\n    response.raise_for_status()\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    token_input = soup.find(\"input\", {\"name\": \"__csrf\"})",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "get_csrf_token",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "def get_csrf_token(session: requests.Session) -> str:\n    \"\"\"Fetch the login page and extract the hidden CSRF token.\"\"\"\n    response = session.get(f\"{BASE_URL}/sign-in/\", timeout=15)\n    response.raise_for_status()\n    soup = BeautifulSoup(response.text, \"html.parser\")\n    token_input = soup.find(\"input\", {\"name\": \"__csrf\"})\n    if not token_input or not token_input.get(\"value\"):\n        raise RuntimeError(\"Could not find CSRF token on Letterboxd login page.\")\n    return str(token_input[\"value\"])\ndef login(session: requests.Session, username: str, password: str) -> None:",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "def login(session: requests.Session, username: str, password: str) -> None:\n    \"\"\"Authenticate the session using Letterboxd's sign-in endpoint.\"\"\"\n    csrf = get_csrf_token(session)\n    response = session.post(\n        f\"{BASE_URL}/user/login.do\",\n        data={\"__csrf\": csrf, \"username\": username, \"password\": password},\n        headers={\n            \"Referer\": f\"{BASE_URL}/sign-in/\",\n            \"Content-Type\": \"application/x-www-form-urlencoded\",\n            \"X-Requested-With\": \"XMLHttpRequest\",",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "download_export",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "def download_export(session: requests.Session, output_dir: Path) -> Path:\n    \"\"\"Download the export ZIP into output_dir.\"\"\"\n    response = session.get(\n        f\"{BASE_URL}/data/export/\",\n        headers={\"Referer\": f\"{BASE_URL}/settings/data/\"},\n        stream=True,\n        timeout=60,\n    )\n    response.raise_for_status()\n    output_dir.mkdir(parents=True, exist_ok=True)",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "extract_export",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "def extract_export(archive_path: Path) -> Path:\n    \"\"\"Safely extract a ZIP, rejecting paths that escape the destination.\"\"\"\n    extract_dir = archive_path.parent / archive_path.stem\n    extract_dir.mkdir(parents=True, exist_ok=True)\n    base = extract_dir.resolve()\n    with zipfile.ZipFile(archive_path) as archive:\n        for member in archive.infolist():\n            target = (extract_dir / member.filename).resolve()\n            if target != base and base not in target.parents:\n                raise RuntimeError(\"Export archive contains an unsafe file path.\")",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "run_export",
+        "kind": 2,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "def run_export(\n    username: str,\n    password: str,\n    output_dir: Path | str = DEFAULT_OUTPUT_DIR,\n) -> ExportResult:\n    \"\"\"Log in, download the export, and extract it.\n    Credentials are supplied by the caller so this function can run from a CLI,\n    tests, or an orchestrator such as Windmill without prompting.\n    \"\"\"\n    if not username.strip():",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "BASE_URL = \"https://letterboxd.com\"\nDEFAULT_OUTPUT_DIR = Path(\"data/movies/raw/letterboxd\")\nUSER_AGENT = (\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \"\n    \"AppleWebKit/537.36 (KHTML, like Gecko) \"\n    \"Chrome/147.0.0.0 Safari/537.36\"\n)\n@dataclass(frozen=True)\nclass ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_OUTPUT_DIR",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "DEFAULT_OUTPUT_DIR = Path(\"data/movies/raw/letterboxd\")\nUSER_AGENT = (\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \"\n    \"AppleWebKit/537.36 (KHTML, like Gecko) \"\n    \"Chrome/147.0.0.0 Safari/537.36\"\n)\n@dataclass(frozen=True)\nclass ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"\n    archive_path: Path",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    },
+    {
+        "label": "USER_AGENT",
+        "kind": 5,
+        "importPath": "src.letterboxd_pipeline.client",
+        "description": "src.letterboxd_pipeline.client",
+        "peekOfCode": "USER_AGENT = (\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) \"\n    \"AppleWebKit/537.36 (KHTML, like Gecko) \"\n    \"Chrome/147.0.0.0 Safari/537.36\"\n)\n@dataclass(frozen=True)\nclass ExportResult:\n    \"\"\"Paths produced by a successful export run.\"\"\"\n    archive_path: Path\n    extract_dir: Path",
+        "detail": "src.letterboxd_pipeline.client",
+        "documentation": {}
+    }
+]
